@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+
 
 // --- 1. IMPORTAÇÃO DOS CONTEXTOS (A Lógica Global) ---
 import { AuthProvider } from "@/context/AuthContext";
