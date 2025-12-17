@@ -1,0 +1,2498 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
+a,
+article,
+body,
+center,
+div,
+em,
+footer,
+form,
+h1,
+h2,
+h3,
+header,
+html,
+i,
+img,
+label,
+li,
+nav,
+p,
+s,
+section,
+span,
+strong,
+table,
+tbody,
+th,
+thead,
+tr,
+ul {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  -webkit-text-size-adjust: none;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+:root {
+    /* --- Identidade D'Choco --- */
+    --primary-color: #1d4a3e; /* Verde escuro */
+    --primary-alt: #2563eb;   /* Azul (caso precise de destaque, senão pode remover) */
+    
+    /* Fundos */
+    --bg-body: #a87a53;       /* Marrom da marca */
+    --bg-card: #ffffff;       /* Fundo branco para leitura */
+    
+    /* Textos */
+    --text-main: #1a1a1a;     /* Preto suave */
+    --text-muted: #6b7280;    /* Cinza para textos secundários */
+    
+    /* Bordas e Status */
+    /* Dica: separei a cor da borda da espessura para facilitar o uso */
+    --border-color: #1d4a3e;
+    --border-style: 2px solid var(--border-color); 
+    --success: #10b981;       /* Verde sucesso */
+
+    /* Estrutura e Efeitos */
+    --radius: 8px;            /* 8px combina mais com o estilo "Strongly Typed" */
+    --sidebar-width: 280px;
+    
+    /* Sombras (Mantive as do segundo bloco que são mais modernas) */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body {
+  background-attachment: scroll;
+  
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+body.is-preload *,
+body.is-preload :after,
+body.is-preload :before {
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+body,
+input,
+textarea {
+  color: #000;
+  font-family: Source Sans Pro;
+  font-size: 15pt;
+  font-weight: 300;
+  line-height: 1.65em;
+}
+h1,
+h2,
+h3 {
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h1 a,
+h2 a,
+h3 a {
+  border: 0;
+  color: inherit;
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.65em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.75em;
+  margin: 0 0 1.5em;
+}
+h3 {
+  font-size: 1em;
+  letter-spacing: 2px;
+  margin: 0 0 1.25em;
+}
+a {
+  border-bottom: 1px solid #ddd;
+  color: #000;
+  text-decoration: none;
+}
+a,
+a strong {
+  -moz-transition:
+    color 0.25s ease-in-out,
+    border-bottom-color 0.25s ease-in-out;
+  -webkit-transition:
+    color 0.25s ease-in-out,
+    border-bottom-color 0.25s ease-in-out;
+  -ms-transition:
+    color 0.25s ease-in-out,
+    border-bottom-color 0.25s ease-in-out;
+  transition:
+    color 0.25s ease-in-out,
+    border-bottom-color 0.25s ease-in-out;
+}
+
+strong {
+  color: #000;
+  font-weight: 600;
+}
+em,
+i {
+  font-style: italic;
+}
+hr {
+  border: 0;
+  border-top: 2px solid #1d4a3e;
+}
+p {
+  text-align: justify;
+}
+p,
+table,
+ul {
+  margin-bottom: 2em;
+}
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 70%;
+}
+@media screen and (max-width: 1680px) {
+  .container {
+    width: 68em;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    width: calc(100% - 80px);
+  }
+}
+@media screen and (max-width: 980px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 736px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 100vh;
+  padding-top: 9%;
+  width: 70%;
+}
+.row {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.row,
+.row > * {
+  box-sizing: border-box;
+}
+.row.aln-center {
+  justify-content: center;
+}
+.row > .col-4 {
+  width: 33.33333%;
+  
+}
+.row > .col-4 > input{
+  width: 100%;
+  
+}
+
+.row > .col-4 > .button {
+  width: 100%;
+  height: 100%;
+  
+}
+.row > .col-6 {
+  width: 50%;
+}
+.row > .col-8 {
+  width: 66.66667%;
+}
+.row > .col-12 {
+  width: 100%;
+}
+.row.gtr-50 {
+  margin-left: -25px;
+  margin-top: -25px;
+}
+.row.gtr-50 > * {
+  padding: 25px 0 0 25px;
+}
+.row {
+  margin-left: -50px;
+  margin-top: -50px;
+}
+.row > * {
+  padding: 50px 0 0 50px;
+}
+@media screen and (max-width: 1680px) {
+  .row {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row,
+  .row > * {
+    box-sizing: border-box;
+  }
+  .row.aln-center {
+    justify-content: center;
+  }
+  .row.gtr-50 {
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+  .row.gtr-50 > * {
+    padding: 25px 0 0 25px;
+  }
+  .row {
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+  .row > * {
+    padding: 50px 0 0 50px;
+  }
+  .texto-centralizado,
+  .texto-centralizado section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .texto-centralizado section header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: flex-end;
+    min-height: 100px;
+  }
+  .texto-centralizado section header h3 {
+    flex-grow: 0;
+    margin-bottom: 0.3em;
+  }
+  .texto-centralizado section header h2 {
+    flex-grow: 0;
+    margin-bottom: 0.8em;
+  }
+  .texto-centralizado section .image.featured {
+    flex-grow: 0;
+  }
+  
+  .espaco-botao {
+    gap: 4px;
+  }
+  .espaco-botao .form-button-submit {
+    font-size: 0.2em;
+    letter-spacing: 0.1px;
+    
+    min-width: 102px;           /* Ocupa a largura total disponível */
+    
+  }
+  .espaco-botao .form-button-submit-catalogo {
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.1px;
+    height: auto;
+    width: 40%;           /* Ocupa a largura total disponível */
+    padding: 3%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  
+  /* =========================================
+     1. Classes Utilitárias - GRID DE PRODUTOS
+     ========================================= */
+  .product-row {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  
+  .product-row > * {
+    box-sizing: border-box;
+  }
+  
+  .product-row.aln-center {
+    justify-content: center;
+  }
+  
+  .product-row.gtr-50 {
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+  
+  .product-row.gtr-50 > * {
+    padding: 20px 0 0 20px;
+  }
+  
+  .product-row {
+    margin-left: -40px;
+    margin-top: -40px;
+  }
+  
+  .product-row > * {
+    padding: 40px 0 0 40px;
+  }
+
+  /* =========================================
+     2. Estilo Geral das Imagens DE PRODUTOS
+     ========================================= */
+  .product-image {
+    border: 2px solid #1D4A3E !important;
+    display: block;
+    width: 100%;
+    transition: opacity 0.25s ease-in-out;
+    box-sizing: border-box;
+  }
+
+  .product-image img,
+  .product-image.featured {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .product-image.featured {
+    margin: 0 0 1.5em;
+  }
+
+  .product-image.left {
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+    max-width: 450px;
+    position: relative;
+    top: 0.5em;
+  }
+  
+  .product-image.left img {
+    height: auto;
+    width: 100%;
+  }
+
+  /* =========================================
+     3. LAYOUT FLEXBOX (Cards de Produtos)
+     ========================================= */
+  .texto-centralizado {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  .texto-centralizado section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: auto;
+    height: auto;
+    padding-bottom: 4px;
+  }
+
+  /* =========================================
+     4. Conteúdo Interno dos Cards de Produtos
+     ========================================= */
+  .texto-centralizado section header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: flex-end;
+    min-height: auto;
+    margin-bottom: 1em;
+  }
+
+  .texto-centralizado section header h3 {
+    flex-grow: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+  }
+
+  .texto-centralizado section header h2 {
+    flex-grow: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .texto-centralizado section .product-image.featured {
+    width: 100%;
+    flex-grow: 0;
+    border: 6px solid #ebebeb !important;
+  }
+ 
+  /* =========================================
+     5. Botões
+     ========================================= */
+  .espaco-botao {
+    gap: 10px;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .espaco-botao .form-button-submit {
+    font-size: 0.8em;
+    letter-spacing: 0.1px;
+    min-width: 100px;
+  }
+
+  .espaco-botao .form-button-submit-catalogo {
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.1px;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    flex: 1;
+  }
+  
+  .box {
+    width: 100% !important;
+  }
+
+  /* =========================================
+     6. DASHBOARD - Avatar com Borda Verde
+     ========================================= */
+  
+  /* Sidebar sem fundo branco */
+  .sidebar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .sidebar.card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Profile section */
+  .profile-section {
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* AVATAR NO DESKTOP - COM BORDA 2PX */
+  .avatar-container {
+    width: 250px !important;
+    height: 250px !important;
+    margin: 0 auto 0rem !important; /* Sem espaço abaixo */
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 2px solid #1D4A3E !important; /* Borda verde 2px */
+    box-shadow: 0 4px 12px rgba(29, 74, 62, 0.2) !important;
+    background: transparent !important;
+    position: relative !important;
+  }
+
+  .avatar-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    background: transparent !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+@media screen and (max-width: 980px) {
+  .row {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row,
+  .row > * {
+    box-sizing: border-box;
+  }
+  .row.aln-center {
+    justify-content: center;
+  }
+  .row > .imp-medium {
+    order: -1;
+  }
+  .row > .col-6-medium {
+    width: 50%;
+  }
+  .row > .col-12-medium {
+    width: 100%;
+  }
+  .row.gtr-50 {
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+  .row.gtr-50 > * {
+    padding: 25px 0 0 25px;
+  }
+  .row {
+    margin-left: -50px;
+    margin-top: -50px;
+  }
+  .row > * {
+    padding: 50px 0 0 50px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .row {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .row,
+  .row > * {
+    box-sizing: border-box;
+  }
+  .row.aln-center {
+    justify-content: center;
+  }
+  .row > .col-12-small {
+    width: 100%;
+  }
+  .row.gtr-50 {
+    margin-left: -15px;
+    margin-top: -15px;
+  }
+  .row.gtr-50 > * {
+    padding: 15px 0 0 15px;
+  }
+  .row {
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .row > * {
+    padding: 30px 0 0 30px;
+  }
+  
+
+}
+article,
+section {
+  margin-bottom: 3em;
+}
+article:last-child,
+article > :last-child,
+section:last-child,
+section > :last-child {
+  margin-bottom: 0;
+}
+.image {
+  border: 6px solid #ebebeb !important;
+  display: inline-block;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.image img,
+.image.featured {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.image.featured {
+  margin: 0 0 3.5em;
+}
+.image.left {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+  max-width: 450px;
+  position: relative;
+  top: 0.5em;
+}
+.image.left img {
+  height: auto;
+  width: 100%;
+}
+ul {
+  list-style: disc;
+  padding-left: 1em;
+}
+ul li {
+  margin: 0.75em 0;
+  padding-left: 0.5em;
+}
+ul li:first-child {
+  margin-top: 0;
+}
+ul.links {
+  list-style: none;
+  padding-left: 0;
+}
+ul.links li {
+  border-left: 1px solid #d0d0d0;
+  display: inline;
+  margin: 0 0 0 1em;
+  padding-left: 1em;
+}
+ul.links li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+ul.actions {
+  
+  clear: both;
+  list-style: none;
+  margin-top: 2.5em;
+  padding-left: 0;
+}
+ul.actions li {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  padding-left: 0;
+}
+ul.actions li:first-child {
+  margin-left: 0;
+}
+
+/* Fix for Font Awesome 6 on list items */
+
+/* Fix for Font Awesome 6 on buttons */
+.button.fa-solid, .button.fa-brands {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.button.fa-solid:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.5;
+  padding-right: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+.button.fa-brands:before {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  opacity: 0.5;
+  padding-right: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+form label {
+  color: #000;
+  display: block;
+  font-weight: 600;
+  margin: 0 0 1em;
+  text-transform: uppercase;
+}
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form textarea {
+  -webkit-appearance: none;
+  background: #e8e8e8;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: inset 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+  display: block;
+  line-height: 1.25em;
+  padding: 0.75em 1em;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+  width: 100%;
+}
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="text"]:focus,
+form textarea:focus {
+  background: #f0f0f0;
+}
+form textarea {
+  min-height: 11em;
+}
+form ::-webkit-input-placeholder {
+  color: #555 !important;
+  line-height: 1.35em;
+}
+form :-moz-placeholder,
+form ::-moz-placeholder {
+  color: #555 !important;
+}
+form :-ms-input-placeholder {
+  color: #555 !important;
+}
+form ::-moz-focus-inner {
+  border: 0;
+}
+table {
+  width: 100%;
+}
+table tbody tr {
+  border-top: 1px solid #e5e5e5;
+}
+table tbody tr:first-child {
+  border-top: 0;
+}
+
+table th {
+  padding: 0.75em 1em;
+}
+table th {
+  font-weight: 700;
+  text-align: left;
+}
+table thead {
+  background: #878787;
+  border: 0;
+  box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+  pointer-events: auto !important;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: #1d4a3e;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+  color: #fff;
+  display: inline-block;
+  font-size: 1em;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  outline: 0;
+  padding: 0.85em 2.75em;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  z-index: 100;
+}
+.button.icon:before,
+button.icon:before,
+input[type="button"].icon:before,
+input[type="submit"].icon:before {
+  opacity: 0.5;
+  padding-right: 0.75em;
+  position: relative;
+  top: 0.05em;
+}
+
+
+
+
+.no-sidebar .box.post > header {
+  text-align: center;
+}
+.icon {
+  position: relative;
+  text-decoration: none;
+}
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: Font Awesome\5 Free;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  line-height: inherit;
+  text-rendering: auto;
+  text-transform: none !important;
+}
+.icon > .label {
+  display: none;
+}
+#page-wrapper > section {
+  margin-bottom: 0;
+  
+}
+#header {
+  background: transparent;
+  position: relative;
+  text-align: center;
+}
+#header > .container {
+  border-bottom: 1px solid #000;
+  padding: 14em 0 7em;
+  position: relative;
+}
+#header > .container:after {
+  background: #000;
+  bottom: 6px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+#header h1 {
+  
+  font-family: Arvo;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 13px;
+  text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+}
+#header h1 a {
+  border: 0;
+}
+#header p {
+  color: #000;
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 2.5em 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#nav {
+  display: none;
+}
+
+
+.dropotron {
+  background: #fff;
+  background: hsla(0, 0%, 100%, 0.965);
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin-left: -2px;
+  margin-top: calc(-0.5em + 1px);
+  min-width: 12em;
+  padding: 0.75em 0 0.5em;
+  text-align: left;
+}
+.dropotron a,
+.dropotron span {
+  border: 0;
+  border-top: 1px solid #f0f0f0;
+  display: block;
+  outline: 0;
+  padding: 0.3em 1em;
+}
+.dropotron li {
+  margin: 0;
+  padding-left: 0;
+}
+.dropotron li:first-child > a,
+.dropotron li:first-child > span {
+  border-top: 0;
+  padding-top: 0;
+}
+
+#features {
+  background: #fff;
+  overflow: hidden;
+  padding: 6em 0;
+  position: relative;
+}
+#features,
+#features p {
+  text-align: center;
+}
+#features ul.actions {
+  margin-top: 1.25em;
+}
+#banner {
+  background: #fff;
+  background-image: url(/images/banner.jpg);
+  background-size: cover;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
+  box-shadow:
+    inset 0 -8px 0 0 #fff,
+    inset 0 8px 0 0 #fff;
+  color: #fff;
+  overflow: hidden;
+  padding: 10em 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+#banner p {
+  font-size: 2em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  line-height: 1.5em;
+  margin: 0;
+  text-align: center;
+}
+#banner strong {
+  color: inherit;
+}
+#banner > .container {
+  position: relative;
+}
+#banner > .container:after,
+#banner > .container:before {
+  background: url(/images/bracket.svg);
+  content: "";
+  display: block;
+  height: 141px;
+  margin-top: -70px;
+  opacity: 0.15;
+  position: absolute;
+  top: 50%;
+  width: 35px;
+}
+#banner > .container:before {
+  left: 0;
+}
+#banner > .container:after {
+  right: 0;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#main {
+  background: transparent;
+  overflow: hidden;
+  padding: 6em 0;
+  position: relative;
+}
+#content > article,
+#content > section {
+  border-top: 2px solid #e5e5e5;
+  box-shadow:
+    inset 0 8px 0 0 #fff,
+    inset 0 10px 0 0 #e5e5e5;
+  margin: 5em 0 0;
+  padding: 5em 0 0;
+}
+#content > article:first-child,
+#content > section:first-child {
+  border-top: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+#footer {
+  background: #d3d3d3;
+  border-top: 2px solid #e5e5e5;
+  overflow: hidden;
+  padding: 6em 0 8em;
+  position: relative;
+}
+#footer form input[type="email"],
+#footer form input[type="password"],
+#footer form input[type="text"],
+#footer form textarea {
+  background: #f7f7f7;
+}
+#footer form input[type="email"]:focus,
+#footer form input[type="password"]:focus,
+#footer form input[type="text"]:focus,
+#footer form textarea:focus {
+  background: #fff;
+}
+#copyright,
+#footer h2 {
+  text-align: center;
+}
+#copyright {
+  border-top: 2px solid #e5e5e5;
+  margin-top: 6em;
+  padding-top: 4em;
+  text-align: left;
+}
+@media screen and (min-width: 1680px) {
+  body,
+  input,
+  textarea {
+    font-size: 13pt;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body,
+  input,
+  textarea {
+    font-size: 12pt;
+  }
+  h2 br,
+  h3 br {
+    display: none;
+  }
+  .image.left,
+  .image.right {
+    max-width: 50%;
+  }
+  #header > .container {
+    padding: 12em 0 5em;
+  }
+  #header h1 {
+    font-size: 2.5em;
+  }
+  #nav > ul > li {
+    padding-right: 1.25em;
+  }
+  #features {
+    padding: 4em 0;
+  }
+  #banner {
+    padding: 8em 0;
+  }
+  #banner > .container {
+    padding: 0 4em;
+  }
+  #banner > .container br {
+    display: none;
+  }
+  #footer,
+  #main {
+    padding: 4em 0;
+  }
+  #copyright {
+    margin-top: 2em;
+    padding-top: 2em;
+  }
+  #email,
+
+#senha {
+
+  width: 40%;
+
+}
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: #2b6b59; /* Um verde um pouco mais claro para destacar */
+  color: #fff;
+  transform: translateY(-3px); /* O botão sobe 3 pixels */
+  box-shadow: 0.2em 0.25em 0 0 rgba(0, 0, 0, 0.2); /* A sombra aumenta para dar profundidade */
+}
+}
+@media screen and (max-width: 980px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  #header > .container {
+    padding: 10em 0 7em;
+  }
+  #nav {
+    display: none;
+  }
+  #page-wrapper {
+    padding-bottom: 1px;
+  }
+  #page-wrapper {
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+  }
+}
+@media screen and (max-width: 736px) {
+  body,
+  input,
+  textarea {
+    font-size: 11pt;
+  }
+  h2,
+  h3 {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    margin: 0 0 1em;
+    text-align: center;
+  }
+  h2 br,
+  h3 br {
+    display: none;
+  }
+  .texto-centralizado,
+  .texto-centralizado section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .texto-centralizado section header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: flex-end;
+    min-height: 100px;
+  }
+  .texto-centralizado section header h3 {
+    flex-grow: 0;
+    margin-bottom: 0.3em;
+    font-size: 12px;
+  }
+  .texto-centralizado section header h2 {
+    flex-grow: 0;
+    margin-bottom: 0.8em;
+  }
+  .texto-centralizado section .image.featured {
+    flex-grow: 0;
+  }
+  .texto-centralizado section .espaco-botao {
+    margin-top: auto;
+  }
+  .image.featured {
+    margin: 0 0 1.5em;
+  }
+  .image.left,
+  .image.right {
+    max-width: 35%;
+  }
+  .col-12-small,
+  
+  .col-6-medium {
+    width: 100% 
+  }
+
+ 
+  .button,
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    display: block;
+    letter-spacing: 2px;
+    padding: 1.2em 0;
+    width: 100%;
+    font-size: 0.95em;
+  }
+  ul.actions li {
+    display: block;
+    margin: 1em 0 0;
+  }
+  ul.actions li:first-child {
+    margin-top: 0;
+  }
+  #header > .container {
+    padding: 6em 0 4em;
+  }
+  #header h1 {
+    font-size: 2em;
+    letter-spacing: 8px;
+    line-height: 1.325em;
+  }
+  #header p {
+    letter-spacing: 2px;
+    margin: 1.25em 0 0;
+  }
+  #banner {
+    padding: 5em 0;
+  }
+  #banner > .container {
+    padding: 0;
+  }
+  #banner > .container:after,
+  #banner > .container:before {
+    display: none;
+  }
+  #banner p {
+    font-size: 1.25em;
+  }
+  #features {
+    padding: 2em 0;
+  }
+  #features ul.actions {
+    margin-top: 0;
+  }
+  #main {
+    padding: 2em 0;
+  }
+  #content > article,
+  #content > section {
+    margin: 3em 0 0;
+    padding: 3em 0 0;
+  }
+  #footer {
+    padding: 2em 0;
+  }
+  #copyright .links {
+    margin-bottom: 0;
+  }
+  #copyright .links li {
+    border-left: 0;
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.slider-container {
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+}
+.slide {
+  display: none;
+}
+.active {
+  animation: fade 0.5s;
+  display: block;
+}
+.slide img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.texto-centralizado {
+  text-align: center;
+}
+.display-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+.display-flex input {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 40%;
+}
+.row .display-flex {
+  align-items: left;
+  margin-bottom: 10px;
+}
+.display-flex a,
+.display-flex h1,
+.display-flex p {
+  font-weight: 700;
+  margin: 0 0 5px;
+  width: 40%;
+}
+.display-grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 70% 30% 50% 20%;
+}
+.login-container {
+  grid-column: 2/5;
+  padding: 40px;
+}
+.display-grid .display-flex {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+@media screen and (max-width: 980px) {
+  .display-grid {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .display-grid .slider-container {
+    display: none;
+  }
+  .login-container {
+    grid-column: 1;
+    padding: 30px 20px;
+  }
+  .display-flex a,
+  .display-flex h1,
+  .display-flex input,
+  .display-flex p {
+    width: 100%;
+  }
+  .container-login {
+    padding-top: 5%;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 736px) {
+  .container-login {
+    min-height: auto;
+    padding-top: 2%;
+    width: 95%;
+  }
+  .display-grid {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+  .display-grid .slider-container {
+    display: none;
+  }
+  .login-container {
+    grid-column: 1;
+    padding: 20px 15px;
+  }
+  .login-container .col-6 {
+    max-width: 100%;
+    width: 100% !important;
+  }
+  .display-flex {
+    align-items: center;
+    text-align: center;
+  }
+  .display-flex input {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 12px;
+    width: 100%;
+  }
+  .display-flex a,
+  .display-flex h1,
+  .display-flex p {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  .display-flex h1 img {
+    height: auto;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+  .login-container .row {
+    margin: 0;
+    width: 100%;
+  }
+  .login-container .col-12 {
+    padding: 0;
+    width: 100% !important;
+  }
+  .form-button-submit {
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+  }
+  .form-button-submit,
+  .login-container .display-flex .form-button-submit,
+  .login-container .form-button-submit {
+    max-width: 100%;
+    width: 100%;
+  }
+  .espaco-botao {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+  .espaco-botao .form-button-submit {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 10px;
+    font-size: 0.9em;
+  }
+}
+.texto-centralizado section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.texto-centralizado section header {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  justify-content: flex-end;
+  min-height: 80px;
+}
+.texto-centralizado section header h3 {
+  margin-bottom: 0.5em;
+}
+.texto-centralizado section header h2 {
+  margin-bottom: 1em;
+}
+.texto-centralizado section .image.featured {
+  flex-grow: 0;
+}
+.espaco-botao {
+  display: flex;
+  gap: 18px;
+  margin-top: auto;
+}
+.espaco-botao .form-button-submit {
+  flex: 1;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .container-login {
+    padding: 10px;
+    width: 100%;
+  }
+  .display-grid .slider-container {
+    display: none;
+  }
+  .login-container {
+    padding: 15px 10px;
+  }
+  .login-container .col-6 {
+    max-width: 100%;
+    width: 100% !important;
+  }
+  .display-flex {
+    align-items: center;
+    text-align: center;
+  }
+  .display-flex input {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 10px;
+    width: 100%;
+  }
+  .display-flex p {
+    font-size: 14px;
+  }
+  .display-flex a,
+  .display-flex p {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  .display-flex h1 img {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+  .login-container .row {
+    margin: 0;
+    width: 100%;
+  }
+  .login-container .col-12 {
+    padding: 0;
+    width: 100% !important;
+  }
+  .form-button-submit {
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.85em;
+    margin: 0 auto;
+    padding: 12px;
+  }
+  .form-button-submit,
+  .login-container .display-flex .form-button-submit,
+  .login-container .form-button-submit {
+    max-width: 100%;
+    width: 100%;
+  }
+  .texto-centralizado,
+  .texto-centralizado section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .texto-centralizado section header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: flex-end;
+    min-height: 100px;
+  }
+  .texto-centralizado section header h3 {
+    flex-grow: 0;
+    margin-bottom: 0.3em;
+  }
+  .texto-centralizado section header h2 {
+    flex-grow: 0;
+    margin-bottom: 0.8em;
+  }
+  .texto-centralizado section .image.featured {
+    flex-grow: 0;
+  }
+  .texto-centralizado section .espaco-botao {
+    
+  }
+  .espaco-botao {
+    gap: 4px;
+  }
+  .espaco-botao .form-button-submit {
+    font-size: 0.2em;
+    letter-spacing: 0.1px;
+    
+    min-width: 102px;           /* Ocupa a largura total disponível */
+    
+  }
+  .espaco-botao .form-button-submit-catalogo {
+    font-size: 0.8em;
+    text-align: center;
+    letter-spacing: 0.1px;
+    height: auto;
+    width: 90%;           /* Ocupa a largura total disponível */
+    padding: 3%;
+  }
+  .button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: #2b6b59; /* Um verde um pouco mais claro para destacar */
+  color: #fff;
+  transform: translateY(-3px); /* O botão sobe 3 pixels */
+  box-shadow: 0.2em 0.25em 0 0 rgba(0, 0, 0, 0.2); /* A sombra aumenta para dar profundidade */
+}
+  
+
+
+  /* =========================================
+     2. Estilo Geral das Imagens DE PRODUTOS
+     ========================================= */
+ .product-image {
+  border: 2px solid #1D4A3E !important;
+  display: block;
+  width: 50%;
+  transition: opacity 0.25s ease-in-out;
+  box-sizing: border-box;
+
+  /* Novas propriedades para criar o círculo */
+  border-radius: 50%;     /* Arredonda as bordas */
+  aspect-ratio: 1 / 1;    /* Força a imagem a ser quadrada (largura = altura) */
+  object-fit: cover;      /* Garante que a imagem preencha o círculo sem ficar esticada/espremida */
+}
+
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.25em;
+  line-height: 1.6;
+}
+
+.details-list li i {
+  min-width: 1.5em;
+  margin-right: 1em;
+  margin-top: 0.2em;
+  text-align: center;
+  color: #ed786a;
+  flex-shrink: 0;
+}
+
+.details-list li a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(128, 128, 128, 0.5);
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+
+
+.row .button {
+  width: 100%;
+}
+
+.col-12 .button-1{
+  width: 40%;
+} 
+#header-sonho h2{
+  text-align: left;
+}
+
+
+/* --- Layout Principal (Grid) --- */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+.dashboard-wrapper .card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+    border: var(--border-style) !important;
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 1px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+
+/* --- ÁREA DE CONTEÚDO --- */
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.row:last-child { border: none; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
+
+.hidden { display: none !important; }
+
+/* --- Layout Principal (Grid) --- */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 1px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+
+/* --- ÁREA DE CONTEÚDO --- */
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* No desktop, alguns cards ficam lado a lado */
+
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+.row:last-child {
+    border-bottom: none;
+}
+
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Desktop: Sidebar + Conteúdo */
+@media (min-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 300px 1fr; /* Sidebar fixa 300px + resto livre */
+        align-items: start;
+    }
+}
+
+/* --- Estilos Comuns de Card --- */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    height: 100%; /* Para cards no grid terem mesma altura */
+}
+
+/* --- SIDEBAR (Foto de Perfil) --- */
+.sidebar {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 2rem; /* Fica fixo ao rolar no desktop */
+}
+
+.avatar-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 1px solid white;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+#profile-image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Efeito Overlay na Foto */
+
+/* --- ÁREA DE CONTEÚDO --- */
+
+/* Grid interno dos cards de conteúdo */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* No desktop, alguns cards ficam lado a lado */
+
+
+
+  /* =========================================
+     DASHBOARD MOBILE - Layout Responsivo
+     ========================================= */
+  
+  /* Dashboard vira coluna única em mobile */
+  .dashboard-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 95% !important;
+    margin: 2% auto !important;
+    gap: 1rem !important;
+  }
+
+  /* =========================================
+     SIDEBAR MOBILE - Avatar Grande
+     ========================================= */
+  .sidebar {
+    margin-top: 20px !important;
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important; /* Remove fundo branco */
+    border: none !important;
+    box-shadow: none !important;
+    
+  }
+
+  /* Sidebar sem card branco em mobile */
+  .sidebar.card {
+    
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Profile section sem fundo branco */
+  .profile-section {
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important; /* Controla o espaço entre a imagem e o conteúdo abaixo */
+  }
+
+  /* AVATAR GRANDE EM MOBILE - CENTRALIZADO */
+  .avatar-container {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto 0.5rem !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(29, 74, 62, 0.2) !important;
+    background: transparent !important;
+    position: relative !important;
+  }
+
+  .avatar-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    background: transparent !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  /* Texto da sidebar em mobile */
+  .sidebar .editable-row {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    border: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .sidebar .label {
+    font-size: 0.7rem !important;
+  }
+
+  .sidebar .view-text {
+    font-size: 1rem !important;
+  }
+
+  /* =========================================
+     CONTEÚDO PRINCIPAL MOBILE
+     ========================================= */
+  .content-area {
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+
+  /* Grid vira coluna única */
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  /* Cards ocupam largura total */
+  .card {
+    width: 100% !important;
+  }
+
+  .card-header {
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* =========================================
+     LINHAS EDITÁVEIS MOBILE
+     ========================================= */
+  .dashboard-row {
+    padding: 0.75rem 1rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .dashboard-row .content {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+
+  .dashboard-row .label {
+    font-size: 0.75rem !important;
+  }
+
+  .dashboard-row .value-group {
+    font-size: 0.95rem !important;
+  }
+
+  /* Botões em mobile */
+  .actions {
+    width: 100% !important;
+    justify-content: flex-end !important;
+  }
+
+  .action-buttons {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .btn-save, .btn-cancel {
+    flex: 1 !important;
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Input em mobile */
+  .edit-input {
+    font-size: 0.9rem !important;
+    padding: 8px !important;
+  }
+
+
+.card-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    
+}
+
+/* --- LINHAS E INPUTS (Do código anterior, ajustado) --- */
+.row {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    
+}
+.row:last-child { border: none; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+
+
+.hidden { display: none !important; }
+
+.content { flex: 1; margin-right: 1rem; }
+.label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; }
+.value-group { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 1rem; }
+
+/* Input field styles */
+.edit-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   1. Variáveis e Reset Básico
+   ========================================= */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block; /* Override main.css flex */
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    margin: 0;
+    padding: 0; /* Override main.css padding */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* =========================================
+   2. Layout Principal (Grid System)
+   ========================================= */
+.dashboard-wrapper {
+    /* --- 1. Ativa o Grid (Faltava isso) --- */
+    display: grid; 
+    
+    /* --- 2. Define as colunas: Sidebar (250px) e Conteúdo (resto) --- */
+    grid-template-columns: 250px 1fr; 
+    
+    /* --- Estilos de posicionamento --- */
+    flex: 1; /* Para ocupar altura se estiver num flex container pai */
+    width: 90%;
+    max-width: 1280px;
+    margin: 3% auto; /* Centraliza na tela */
+    gap: 2rem;
+    align-items: start; 
+}
+
+/* =========================================
+   3. Sidebar (Perfil Esquerdo)
+   ========================================= */
+.sidebar {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 70px;
+    height: 90%;
+}
+.profile-photo-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+
+
+.content-area {
+    margin-top: 70px;
+    
+}
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 1px;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste específico para o texto dentro da sidebar */
+.sidebar .editable-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.sidebar .view-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   4. Área de Conteúdo Principal
+   ========================================= */
+
+/* Grid para os Cards de Informação */
+.grid-container {
+    display: grid;
+    /* Cria colunas automaticamente (min 400px cada) */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Estilo dos Cards (Seções) */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 0; /* Padding controlado nos filhos */
+    overflow: hidden;
+}
+
+/* Sidebar já tem classe card, mas precisa de estilo específico acima. 
+   Aqui estilizamos os cards da grid */
+.grid-container .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    background-color: #1D4A3E;
+    border-bottom: 1px solid;
+    
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* =========================================
+   5. Linhas Editáveis (Onde a mágica acontece)
+   ========================================= */
+.row.editable-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.row.editable-row:last-child {
+    border-bottom: none;
+}
+
+.content .value-group span {
+    text-align: right;
+}
+
+/* Coluna de Conteúdo (Label + Valor) */
+.row .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1; /* Ocupa espaço disponível */
+    padding-right: 1rem;
+}
+
+.row .label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.row .value-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    min-height: 24px;
+}
+
+.row .view-text {
+    font-size: 1rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Ícone de verificado */
+
+/* =========================================
+   6. Inputs e Edição
+   ========================================= */
+.edit-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 138, 188, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================
+   7. Botões e Ações
+   ========================================= */
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Botão do Lápis (Editar) */
+.btn-edit {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-edit svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+
+/* Grupo Salvar/Cancelar */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-save, .btn-cancel {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    border: none;
+}
+
+.btn-save {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+
+
+
+/* =========================================
+   8. Responsividade (Mobile)
+   ========================================= */
+@media (max-width: 900px) {
+    .dashboard-wrapper {
+        grid-template-columns: 1fr; /* Uma coluna só */
+        gap: 1.5rem;
+        text-align: center;
+        
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: row; /* Foto lado a lado com nome */
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+        position: relative; /* Remove sticky no mobile */
+        top: 0;
+        background-color: #fff;
+    }
+
+    .profile-photo-wrapper .avatar-container img {
+        
+        width: 64px;
+        height: 64px;
+        margin-right: 50px;
+        
+    }
+
+    .sidebar h1 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+    
+    .sidebar .editable-row {
+        align-items: flex-start;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Cards ocupam largura total */
+    }
+}
+/* Ajuste para botões abaixo do input */
+.row .content {
+    position: relative;
+}
+
+.action-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons.hidden {
+    display: none !important;
+}
+
+
+
+.hidden { display: none !important; }
+
+ 
+
