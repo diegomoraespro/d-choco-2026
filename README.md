@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🍫 **D'Choco — E-commerce Oficial**
+Loja virtual criada para apresentar e fortalecer a marca **D'Choco**, oferecendo uma experiência moderna e elegante na venda de doces artesanais.
 
-First, run the development server:
+**HTML · CSS · JavaScript · PWA**
+
+---
+
+</div>
+
+## 🚀 **Instalação e Deployment**
+
+### Instalação Local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar o repositório
+git clone https://github.com/diegomoraespro/Ecommerce-d-choco-FRONT.git
+cd Ecommerce-d-choco-FRONT
+
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento (opcional - é um site estático)
+# Abrir index.html no navegador
+
+# Build otimizado
+npm run optimize
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deploy na Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Conectar repositório à Vercel**
+   - Acesse https://vercel.com/new
+   - Conecte sua conta GitHub
+   - Selecione este repositório
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Configurações de Build**
+   - Build Command: `npm run optimize`
+   - Output Directory: `.` (raiz)
+   - Variáveis de Ambiente: Não necessárias
 
-## Learn More
+3. **Deploy**
+   - Clique em "Deploy"
+   - A Vercel irá:
+     - Executar PurgeCSS para remover CSS não utilizado
+     - Minificar arquivos CSS
+     - Otimizar imagens
+     - Fazer build do site estático
 
-To learn more about Next.js, take a look at the following resources:
+### Scripts NPM Disponíveis
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build              # Rodar PurgeCSS
+npm run purge-css         # Remover CSS não utilizado
+npm run minify-css        # Minificar CSS (local)
+npm run optimize-images   # Otimizar imagens (local)
+npm run optimize          # Executar todas as otimizações
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 **Design e Licenciamento**
 
-## Deploy on Vercel
+### 🛡️ **1. Direitos Autorais (Copyright)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Todo o conteúdo exclusivo desenvolvido para este projeto pertence à **D'Choco**, incluindo:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Código backend  
+- Lógica e regras de negócio  
+- Customizações do frontend  
+- Imagens de produtos  
+- Textos e conteúdos gráficos  
+
+🔒 **© 2025 D'Choco E-commerce — Todos os Direitos Reservados.**
+
+---
+
+### 📝 **2. Template Base — HTML5 UP (Licença CC BY 3.0)**
+
+O design inicial do site utiliza o template **Strongly Typed** da **HTML5 UP**.
+
+- **Licença:** *Creative Commons Attribution 3.0 Unported (CC BY 3.0)*  
+- Permite uso pessoal e comercial **com créditos obrigatórios**  
+- Texto completo da licença disponível em **LICENSE.txt**
+
+---
+
+## 🧩 **Créditos Obrigatórios (Exigência da Licença)**
+
+Este projeto mantém todos os créditos originais do template, conforme requerido:
+
+| Recurso                | Autor / Origem                                       |
+| ---------------------- | ---------------------------------------------------- |
+| **Template Original**  | *Strongly Typed* — AJ (html5up.net)                  |
+| **Ícones**             | Font Awesome (fontawesome.io)                        |
+| **Ferramentas JS**     | jQuery (jquery.com)                                  |
+| **Sistema Responsivo** | Responsive Tools (github.com/ajlkn/responsive-tools) |
+
+---
+
+<div align="center">
+
+✨ *Obrigado por visitar o repositório da D'Choco!*  
+
+</div>
+
