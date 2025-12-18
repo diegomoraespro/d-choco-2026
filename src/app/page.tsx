@@ -58,10 +58,13 @@ export default function HomePage() {
                         saiba um pouco como a d&apos;choco nasceu
                       </h2>
                     </header>
-                    <span className="image featured">
+                    <span className="image-sonho featured">
                       <img src="/images/sonho-cacau.jpg" alt="Sonho Cacau" />
                     </span>
+                    <br/>
+                    <br/>
                     <h3>Left is the opposite of right</h3>
+                    
                     <p>
                       Phasellus laoreet massa id justo mattis pharetra. Fusce
                       suscipit ligula vel quam viverra sit amet mollis tortor
@@ -110,7 +113,7 @@ export default function HomePage() {
               <div className="col-12">
                 <div className="content-centered">
                   <article className="box post">
-                    <header>
+                    <header className="box post">
                       <h2>
                         <Link href="#">
                           da pra comer bem e ainda ser <strong>fitness</strong> ?
@@ -119,9 +122,11 @@ export default function HomePage() {
                         </Link>
                       </h2>
                     </header>
-                    <Link href="#" className="image featured">
+                    <Link href="#" className="image-pave featured">
                       <img src="/images/pave-chocolate.jpeg" alt="Pavê de Chocolate" />
                     </Link>
+                    <br/>
+                    <br/>
                     <h3>I mean isn&apos;t it possible?</h3>
                     <p>
                       Phasellus laoreet massa id justo mattis pharetra. Fusce
@@ -138,7 +143,7 @@ export default function HomePage() {
                     </p>
                     <ul>
                       <li>
-                        <Link href="#" className="button col-12 fa-solid fa-file">
+                        <Link href="#" className="button col-12 fit">
                           Continue lendo
                         </Link>
                       </li>
@@ -166,7 +171,7 @@ export default function HomePage() {
                           </strong>
                         </h2>
                       </header>
-                      <Link href="#" className="image left">
+                      <Link href="#" className="image-talyta left">
                         <img src="/images/menina-podcast.jpeg" alt="Podcast" />
                       </Link>
 

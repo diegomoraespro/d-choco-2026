@@ -100,16 +100,18 @@ export default function DetalheProdutoPage() {
                         
                         {/* Imagem */}
                         <div className="col-6 col-12-medium texto-centralizado">
-                            <h2><strong>{product.name}</strong></h2>
-                            <div className="image featured">
+                            
+                            <div className="image-prod featured ">
                                 <img src={product.image} alt={product.name} />
                             </div>
                         </div>
                         
                         {/* Informações */}
                         <div className="col-6 col-12-medium">
-                            <section>
                                 <br/><br/><br/>
+                          <h2><strong>{product.name}</strong></h2>
+                            <section>
+                          
                         
                                 <h1>Descrição do Produto</h1>
                                 <p>{product.description}</p>
@@ -141,10 +143,20 @@ export default function DetalheProdutoPage() {
                         </div>
                     </div>
                 </article>
-
             </div>
         </div>
       </section>
+      <section id="banner">
+          <div className="container">
+            <p>
+              feito de forma artesanal <strong>em cada detalhe</strong>.
+              <br />
+              pensando em você.
+            </p>
+          </div>
+        </section>
     </div>
+    
   );
+  
 }

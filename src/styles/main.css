@@ -531,6 +531,12 @@ ul {
     border: none !important;
     box-shadow: none !important;
   }
+  .image img,
+  .image.featured {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   .sidebar.card {
     background: transparent !important;
@@ -1630,6 +1636,7 @@ input[type="submit"]:hover {
   object-fit: cover;      /* Garante que a imagem preencha o círculo sem ficar esticada/espremida */
 }
 
+
 }
 
 .details-list {
@@ -1686,6 +1693,7 @@ input[type="submit"]:hover {
     max-width: 1200px;
     
 }
+
 
 /* Desktop: Sidebar + Conteúdo */
 @media (min-width: 900px) {

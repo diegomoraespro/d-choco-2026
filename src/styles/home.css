@@ -1,17 +1,19 @@
 /* =========================================
    HOMEPAGE - Centralização do Conteúdo
    ========================================= */
-
+@media screen and (min-width: 1400px) {
 .content-centered {
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 /* Ajusta o container principal */
 #main .container {
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 /* Centraliza o logo no header */
@@ -106,6 +108,7 @@
   margin-right: 0.5rem;
   font-size: 1.1rem;
   vertical-align: middle;
+}
 }
 
 /* =========================================

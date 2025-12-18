@@ -11,19 +11,19 @@
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/images/d-choco-logo.png",
+      "src": "/images/app.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/d-choco-logo.png",
+      "src": "/images/app.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/d-choco-logo.png",
+      "src": "/images/app.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"

@@ -11,17 +11,17 @@ import Header from "@/components/HeaderComponent";
 import Footer from "@/components/FooterComponent";
 import PWAManager from "@/components/PWAManager";
 
-
+import "@/styles/catalogo.css";
 import "@/styles/main.css";
 import "@/styles/desktop-nav.css";
 import "@/styles/icone.css";
 import "@/styles/mobile-nav.css";
 import "@/styles/pwa.css";
 import "@/styles/menu-cliente.css";
-import "@/styles/catalogo.css";
 import "@/styles/home.css";
 import "@/styles/carrinho.css";
 import "@/styles/globals.css";
+
 
 // Fonte Inter
 const inter = Inter({ subsets: ["latin"] });
@@ -48,12 +48,12 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         {/* Link para o Manifest */}
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json?v=2" />
         {/* Ícones da PWA */}
-        <link rel="icon" href="/assets/images/logo-d-choco.png" />
-        <link rel="apple-touch-icon" href="/assets/images/logo-d-choco.png" />
+        <link rel="icon" href="/images/app.png" />
+        <link rel="apple-touch-icon" href="/images/app.png" />
         {/* Meta para tema */}
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#000" />
       </head>
       <body className={inter.className}>
         <br/>

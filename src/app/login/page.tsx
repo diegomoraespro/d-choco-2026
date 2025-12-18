@@ -135,25 +135,17 @@ export default function LoginPage() {
   return (
     <div className="right-sidebar is-preload">
       <div id="page-wrapper">
-        <section id="header" className="login-section-centered">
+        <section id="header" className="wrapper style1 login-wrapper">
           <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart"></i>
             <span className="carrinho-badge">0</span>
           </Link>
 
-          <div className="container-login login-wrapper-centered">
-            <div className="display-grid login-grid-centered">
-              <div className="slider-container">
-                <div className="slide">
-                  <Link href="#" className="image featured">
-                    <img src="/images/dichoco.png" alt="D'Choco" />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="login-container display-flex">
+          <div className="container-login-desktop container-login login-wrapper-centered">
+            
+              <div className="login-container login-container-desktop">
                 <h1>
-                  <Link href="/" className="logo-d-choco">
+                  <Link href="/" className="logo-d-choco-login logo-d-choco">
                     <img src="/images/logo-d-choco.png" alt="Logo D'Choco" />
                   </Link>
                 </h1>
@@ -218,21 +210,21 @@ export default function LoginPage() {
                           <path fill="#EA4335" d="M9.003 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.464.891 11.428 0 9.003 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29c.708-2.127 2.692-3.71 5.036-3.71z"/>
                         </svg>
                       </button>
-                 
+                    
                       <p>
                         Não tem uma conta?{" "}
-                        <Link href="/cadastro" className="link-texto">
+                        <a href="/cadastro" className="link-texto" >
                           Cadastrar-se
-                        </Link>
+                        </a>
                       </p>
-                      <Link href="/esqueci-senha" className="link-texto">
+                      <a href="/esqueci-senha" className="link-texto">
                         Esqueci minha senha
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </form>
               </div>
-            </div>
+            
           </div>
         </section>
 
@@ -246,88 +238,7 @@ export default function LoginPage() {
           </div>
         </section>
 
-        <section id="footer">
-          <div className="container">
-            <header>
-              <h2>
-                Sugestões para melhoria? <strong>mande aqui:</strong>
-              </h2>
-            </header>
-            <div className="row">
-              <div className="col-6 col-12-medium">
-                <section>
-                  <form onSubmit={handleEnviarMensagem}>
-                    <div className="row gtr-50">
-                      <div className="col-6 col-12-small">
-                        <input
-                          name="name"
-                          placeholder="Name"
-                          type="text"
-                          value={contato.name}
-                          onChange={handleContatoChange}
-                          required
-                        />
-                      </div>
-                      <div className="col-6 col-12-small">
-                        <input
-                          name="email"
-                          placeholder="Email"
-                          type="email"
-                          value={contato.email}
-                          onChange={handleContatoChange}
-                          required
-                        />
-                      </div>
-                      <div className="col-12">
-                        <textarea
-                          name="message"
-                          placeholder="Message"
-                          value={contato.message}
-                          onChange={handleContatoChange}
-                          required
-                        ></textarea>
-                      </div>
-                      <div className="col-12">
-                        <button
-                          type="submit"
-                          className="form-button-submit button fa-solid fa-envelope"
-                        >
-                          enviar mensagem
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </section>
-              </div>
-              <div className="col-6 col-12-medium">
-                <section className="contact-info">
-                  <p>D'Choco - Chocolates artesanais.</p>
-                  <div className="row">
-                    <div className="col-6 col-12-small">
-                      <h3>Detalhes</h3>
-                      <ul className="details-list">
-                        <li>
-                          <i className="fa-solid fa-envelope"></i>{" "}
-                          <a href="mailto:info@dchoco.com">info@dchoco.com</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-
-          <br />
-          <br />
-          <div id="copyright" className="container">
-            <ul className="links">
-              <li>&copy; 2025 D&apos;Choco. Todos os Direitos Reservados.</li>
-            </ul>
-          </div>
-          <br />
-          <br />
-        </section>
+        
       </div>
     </div>
   );

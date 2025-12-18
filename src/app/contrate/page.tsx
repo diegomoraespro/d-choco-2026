@@ -48,8 +48,8 @@ export default function ContratePage() {
                                 <h2><strong><a href="#">Entenda como funciona nossos serviços</a></strong></h2>
                             </header>
                             
-                            {/* Imagem com float left */}
-                            <a href="#" className="image left">
+                            
+                            <a href="#" className="image-contrato left">
                                 <img src="/images/diego.jpeg" alt="Diego D'Choco" />
                             </a>
                             
