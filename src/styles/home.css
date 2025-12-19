@@ -69,6 +69,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  
 }
 
 .login-tab-button::before {
@@ -86,6 +87,10 @@
 
 .login-tab-button:hover {
   color: #8b4513;
+}
+
+.google-login-button:hover {
+  box-shadow: none;
 }
 
 .login-tab-button:hover::before {
@@ -242,6 +247,7 @@
 .form-button-submit:hover::before {
   width: 300px;
   height: 300px;
+  
 }
 
 .form-button-submit:active {
@@ -313,6 +319,7 @@
   border-top-color: white;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
+  box-shadow: none;
 }
 
 /* =========================================

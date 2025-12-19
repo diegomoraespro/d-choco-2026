@@ -119,7 +119,7 @@ export default function CatalogoPage() {
                         <img src={product.image} alt={product.name} />
                       </Link>
 
-                      <header>
+                      <header className='nome-produto-catalogo'>
                         <h3>{product.name}</h3>
                         <h2>
                           {new Intl.NumberFormat('pt-BR', { 

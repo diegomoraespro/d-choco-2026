@@ -77,6 +77,10 @@ export default function Header() {
                         <img src="/images/app.png" alt="" />
                       </section>
                     </div>
+
+                    <Link href="/" onClick={() => setMenuAdminAberto(false)}>
+                      <i className="fa-solid fa-home"></i> Notificações Clientes
+                    </Link>
                     <Link href="/" onClick={() => setMenuAdminAberto(false)}>
                       <i className="fa-solid fa-home"></i> Tela Home
                     </Link>
@@ -125,6 +129,7 @@ export default function Header() {
                         <img src="/images/app.png" alt="" />
                       </section>
                     </div>
+
                     <Link href="/perfil" onClick={() => setMenuAberto(false)}>Meus Dados</Link>
                     <Link href="/pedidos" onClick={() => setMenuAberto(false)}>Meus Pedidos</Link>
                     <Link href="/enderecos" onClick={() => setMenuAberto(false)}>Endereços</Link>
