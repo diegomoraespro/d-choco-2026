@@ -9,7 +9,7 @@ import { CarrinhoProvider } from "@/context/CarrinhoContext";
 // --- 3. COMPONENTES FIXOS ---
 import Header from "@/components/HeaderComponent";
 import Footer from "@/components/FooterComponent";
-import PWAManager from "@/components/PWAManager";
+import PWAManager from "@/components/PWAManager"; 
 
 import "@/styles/catalogo.css";
 import "@/styles/main.css";

@@ -52,7 +52,7 @@ export default function Header() {
             <li className="menu-usuario-geral">
               <button onClick={toggleMenu} className="menu-toggle-btn">
                 <i className="fa-solid fa-bars"></i>
-                <span>{user.displayName ? user.displayName.split(' ')[0] : 'Menu'}</span>
+                <span>Menu</span>
               </button>
               
               {/* POPUP DESKTOP */}
@@ -62,8 +62,16 @@ export default function Header() {
                     <p><strong>{user.email}</strong></p>
                   </div>
                   <div className="menu-popup-links">
+                    <div className="menu-popup-logo">
+                    <section className="section-menu">
+                      <img src="/images/app.png" alt="" />
+                    </section>
+                  </div>
                     <Link href="/perfil" onClick={() => setMenuAberto(false)}>Meus Dados</Link>
                     <Link href="/pedidos" onClick={() => setMenuAberto(false)}>Meus Pedidos</Link>
+                    <Link href="/enderecos" onClick={() => setMenuAberto(false)}>Endereços</Link>
+                    <Link href="/telefones" onClick={() => setMenuAberto(false)}>Telefones</Link>
+                    <Link href="/catalogo" onClick={() => setMenuAberto(false)}>Voltar ao Catálogo</Link>
                     <button onClick={handleLogout} className="btn-logout">Sair</button>
                   </div>
                 </div>
@@ -96,16 +104,22 @@ export default function Header() {
           </a>
         )}
       </nav>
-
+ 
       {/* ================= POPUP MOBILE ================= */}
       {user && menuAberto && (
         <>
+        
           <div className="menu-overlay" onClick={() => setMenuAberto(false)}></div>
           <div className="menu-popup-mobile">
             <div className="menu-popup-header">
               <p><strong>{user.email}</strong></p>
             </div>
             <div className="menu-popup-links">
+              <div className="menu-popup-logo">
+                <section className="section-menu">
+                  <img src="/images/app.png" alt="" />
+                </section>
+              </div>
               <Link href="/perfil" onClick={() => setMenuAberto(false)}>Meus Dados</Link>
               <Link href="/pedidos" onClick={() => setMenuAberto(false)}>Meus Pedidos</Link>
               <Link href="/enderecos" onClick={() => setMenuAberto(false)}>Endereços</Link>

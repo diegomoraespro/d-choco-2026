@@ -227,7 +227,7 @@ export default function LoginPage() {
             
           </div>
         </section>
-
+ 
         <section id="banner">
           <div className="container">
             <p>

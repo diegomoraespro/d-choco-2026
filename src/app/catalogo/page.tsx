@@ -79,7 +79,7 @@ export default function CatalogoPage() {
             },
           }),
         }}
-      />
+      /> 
 
       <div id="page-wrapper">
         <section id="header">

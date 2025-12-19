@@ -27,19 +27,19 @@
 }
 
 .google-login-button:hover:not(:disabled) {
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .google-login-button:active:not(:disabled) {
-  transform: translateY(1px);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .google-login-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 .google-login-button svg {
@@ -51,10 +51,10 @@
    ============================================ */
 
 .mensagem-erro {
-  width: 40%;
+  width: 22.2%;
   max-width: 100%;
   padding: 0.75rem 1rem;
-  margin: 1rem 0;
+  margin-left: 703px;
   background-color: #ffebee;
   border: 1px solid #ef5350;
   border-radius: 4px;
@@ -342,7 +342,7 @@ ul {
   width: 70%;
   height: auto;
 
-  
+   
 }
 #header-sonho h2 {
   font-size: 30px !important;

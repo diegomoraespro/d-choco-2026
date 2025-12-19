@@ -179,7 +179,7 @@
 /* Popup Mobile */
 .menu-popup-mobile {
   position: fixed;
-  bottom: 70px;
+  bottom: 50px; 
   left: 10px;
   right: 10px;
   background: white;
@@ -217,18 +217,39 @@
 /* Container do menu - LADO DIREITO */
 .menu-popup-mobile {
   position: fixed;
-  top: 45%;
-  left: 30%; /* Mudado de left para right */
-  width: 320px;
+  top: 0%;
+  left: 0; /* Mudado de left para right */
+  width: 400px;
   max-width: 100%;
   height: 100%;
-  background: #fff;
+  background-image: url("/images/cacau-5.png");
+  background-position: center;
+  background-size: cover;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra invertida */
   z-index: 1000;
-  padding: 20px;
+    
   overflow-y: auto;
   transform: translateX(100%); /* Começa fora da tela pela direita */
   animation: slideInRight 0.3s ease forwards;
+  
+}
+
+.section-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+  padding-bottom: 70px;
+}
+
+.menu-popup-logo img {
+  width: 130px;         /* Largura da imagem */
+  height: 130px;        /* Altura igual à largura para ser um quadrado */
+  border-radius: 50%;   /* O segredo para ficar redondo */
+  object-fit: cover;    /* Corta a imagem sem esticar, caso ela não seja quadrada */
+  display: block;       /* Permite o uso de margin auto para centralizar */
+  margin:45px auto;    /* Centraliza e dá um espaço em cima e embaixo */
+  border: 2px solid #ccc; /* Opcional: adiciona uma bordinha ao redor */
 }
 
 /* Animação de entrada pela direita */
@@ -256,18 +277,20 @@
   animation: slideOutRight 0.3s ease forwards;
 }
 
-/* Cabeçalho do menu */
+/* Cabeçalho do menu - REMOVENDO A LINHA */
 .menu-popup-mobile .menu-popup-header {
   text-align: center;
   margin-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: none !important; /* O !important garante que nenhuma outra regra force a linha */
   padding-bottom: 10px;
 }
 
+/* Opcional: Se o email estiver com underline (sublinhado), use este: */
 .menu-popup-mobile .menu-popup-header p {
   font-size: 12px;
   margin: 0;
-  color: #666;
+  color: #000;
+  text-decoration: none; /* Garante que não é um sublinhado do texto */
 }
 
 /* Links do menu */
@@ -278,29 +301,33 @@
 }
 
 .menu-popup-mobile .menu-popup-links a {
-  color: #333;
+  font-size: 20px;
+  color: #000;
   padding: 8px 0;
   text-align: left;
   text-decoration: none;
+  border-bottom: none; /* Garante que não haverá linha */
   transition: color 0.2s ease;
+}
+
+.menu-popup-mobile .btn-logout {
+  color: #A52A2A;
+  text-align: left;
+  background: none;
+  border: none;        /* Remove qualquer borda do botão */
+  border-bottom: none; /* Garante que não haverá linha embaixo */
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: inherit;
+  width: 100%;
+  transition: color 0.2s ease;
+  box-shadow: none;
 }
 
 .menu-popup-mobile .menu-popup-links a:hover {
   color: #1d4a3e;
 }
 
-/* Botão de logout */
-.menu-popup-mobile .btn-logout {
-  color: #d9534f;
-  text-align: left;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px 0;
-  font-size: inherit;
-  width: 100%;
-  transition: color 0.2s ease;
-}
 
 .menu-popup-mobile .btn-logout:hover {
   color: #c9302c;
@@ -324,4 +351,144 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (min-width: 1240px) {
+  /* Overlay do menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  animation: fadeInOverlay 0.3s ease forwards;
+}
+
+@keyframes fadeInOverlay {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Container do menu - LADO DIREITO */
+.menu-popup-desktop {
+  position: fixed;
+  top: 100%;
+  right: 0; /* Mudado de left para right */
+  width:39%;
+  max-width: 100%;
+  height: 900%;
+  background-image: url("/images/cacau-5.png");
+  background-position: center;
+  background-size: cover;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra invertida */
+  z-index: 1000;
+    
+  overflow-y: auto;
+  transform: translateX(100%); /* Começa fora da tela pela direita */
+  animation: slideInRight 0.3s ease forwards;
+  
+}
+
+.section-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu-popup-logo img {
+  width: 130px;         /* Largura da imagem */
+  height: 130px;        /* Altura igual à largura para ser um quadrado */
+  border-radius: 50%;   /* O segredo para ficar redondo */
+  object-fit: cover;    /* Corta a imagem sem esticar, caso ela não seja quadrada */
+  display: block;       /* Permite o uso de margin auto para centralizar */
+  margin:45px auto;    /* Centraliza e dá um espaço em cima e embaixo */
+  border: 2px solid #ccc; /* Opcional: adiciona uma bordinha ao redor */
+}
+
+/* Animação de entrada pela direita */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animação de saída pela direita (opcional) */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Quando estiver fechando */
+.menu-popup-desktop.closing {
+  animation: slideOutRight 0.3s ease forwards;
+}
+
+/* Cabeçalho do menu - REMOVENDO A LINHA */
+.menu-popup-desktop .menu-popup-header {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: none !important; /* O !important garante que nenhuma outra regra force a linha */
+  padding-bottom: 10px;
+}
+
+/* Opcional: Se o email estiver com underline (sublinhado), use este: */
+.menu-popup-desktop .menu-popup-header p {
+  font-size: 12px;
+  margin: 0;
+  color: #000;
+  text-decoration: none; /* Garante que não é um sublinhado do texto */
+}
+
+/* Links do menu */
+.menu-popup-desktop .menu-popup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-popup-desktop .menu-popup-links a {
+  font-size: 20px;
+  color: #000;
+  padding: 8px 0;
+  text-align: left;
+  text-decoration: none;
+  border-bottom: none; /* Garante que não haverá linha */
+  transition: color 0.2s ease;
+}
+
+.menu-popup-desktop .btn-logout {
+  color: #A52A2A;
+  text-align: left;
+  background: none;
+  border: none;        /* Remove qualquer borda do botão */
+  border-bottom: none; /* Garante que não haverá linha embaixo */
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: inherit;
+  width: 100%;
+  transition: color 0.2s ease;
+  box-shadow: none;
+}
+
+.menu-popup-desktop .menu-popup-links a:hover {
+  color: #1d4a3e;
+}
+
+
+.menu-popup-mobile .btn-logout:hover {
+  color: #c9302c;
+}
 }
