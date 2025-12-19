@@ -1,0 +1,99 @@
+/* Modern Desktop Navigation */
+.desktop-top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(29, 74, 62, 0.95); /* Deep Green with slight transparency */
+    backdrop-filter: blur(10px); /* Modern glassmorphism effect */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.desktop-top-nav ul {
+    display: flex;
+    justify-content: center; /* Center the items */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 70px; /* Fixed height for the navbar */
+    text-decoration: none;
+}
+
+.desktop-top-nav li {
+    margin: 0 1.5rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.desktop-top-nav a {
+    text-decoration: none;
+    border-bottom: none !important; /* Remove border from main.css */
+    color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; /* Space between icon and text */
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+/* Icon styling */
+.desktop-top-nav a i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    
+}
+
+/* Hover Effects */
+.desktop-top-nav a:hover {
+    color: #c9a04b; /* Gold color for hover */
+}
+
+
+/* Active State */
+.desktop-top-nav li.active a {
+    color: #c9a04b;
+    text-decoration: none;
+    border-bottom: none !important;
+}
+
+.btn-login-geral,
+.menu-usuario-geral {
+	display: flex; /* mantém seu layout original */
+}
+
+.oculto {
+	display: none !important;
+}
+.menu-popup {
+	display: none;
+	position: absolute;
+	background: #111;
+	border-radius: 8px;
+	padding: 10px;
+	z-index: 9999;
+}
+
+.menu-popup.ativo {
+	display: block;
+}
+
+
+/* Responsive adjustment - Hide on mobile if needed, 
+   though usually handled by media queries in other files */
+@media screen and (max-width: 980px) {
+    .desktop-top-nav {
+        display: none;
+    }
+
+}

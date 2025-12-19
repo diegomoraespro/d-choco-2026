@@ -1,0 +1,327 @@
+/* ================= DESKTOP NAV ================= */
+.desktop-top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #2c5f4f; /* Adicione a cor do seu header */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botão de menu desktop */
+.menu-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.menu-toggle-btn:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.menu-toggle-btn i,
+.menu-toggle-btn span {
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Botão de menu mobile */
+.menu-toggle-btn-mobile {
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: inherit !important;
+  font-size: inherit;
+  padding: 8px 4px;
+  margin: 0;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.menu-toggle-btn-mobile:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+
+.menu-toggle-btn-mobile i,
+.menu-toggle-btn-mobile span {
+  color: inherit !important;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-toggle-btn-mobile i {
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+
+.menu-toggle-btn-mobile span {
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+
+/* Popup Desktop */
+.menu-popup-desktop {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  min-width: 200px;
+  color: #333;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+/* Esconder popup desktop no mobile */
+@media (max-width: 768px) {
+  .menu-popup-desktop {
+    display: none !important;
+  }
+}
+
+.menu-popup-header {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.menu-popup-header p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+.menu-popup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-popup-links a {
+  color: #333;
+}
+
+.btn-logout {
+  color: #d9534f;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ================= MOBILE NAV ================= */
+.mobile-bottom-nav {
+  z-index: 9000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+}
+
+.mobile-bottom-nav a,
+.mobile-bottom-nav .menu-usuario-geral-mobile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  min-width: 0;
+}
+
+.mobile-bottom-nav i {
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+
+.mobile-bottom-nav span {
+  font-size: 0.75em;
+  white-space: nowrap;
+}
+
+/* Overlay Mobile */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+/* Popup Mobile */
+.menu-popup-mobile {
+  position: fixed;
+  bottom: 70px;
+  left: 10px;
+  right: 10px;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* ========================================
+   MENU POPUP MOBILE
+======================================== */
+
+/* Overlay do menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  animation: fadeInOverlay 0.3s ease forwards;
+}
+
+@keyframes fadeInOverlay {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Container do menu - LADO DIREITO */
+.menu-popup-mobile {
+  position: fixed;
+  top: 45%;
+  left: 30%; /* Mudado de left para right */
+  width: 320px;
+  max-width: 100%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra invertida */
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(100%); /* Começa fora da tela pela direita */
+  animation: slideInRight 0.3s ease forwards;
+}
+
+/* Animação de entrada pela direita */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animação de saída pela direita (opcional) */
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Quando estiver fechando */
+.menu-popup-mobile.closing {
+  animation: slideOutRight 0.3s ease forwards;
+}
+
+/* Cabeçalho do menu */
+.menu-popup-mobile .menu-popup-header {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.menu-popup-mobile .menu-popup-header p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+/* Links do menu */
+.menu-popup-mobile .menu-popup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-popup-mobile .menu-popup-links a {
+  color: #333;
+  padding: 8px 0;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.menu-popup-mobile .menu-popup-links a:hover {
+  color: #1d4a3e;
+}
+
+/* Botão de logout */
+.menu-popup-mobile .btn-logout {
+  color: #d9534f;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: inherit;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+.menu-popup-mobile .btn-logout:hover {
+  color: #c9302c;
+}
+
+/* Esconder popup mobile no desktop */
+@media (min-width: 769px) {
+  .menu-popup-mobile,
+  .menu-overlay {
+    display: none !important;
+  }
+}
+
+/* Animação fade in (caso use em outros elementos) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

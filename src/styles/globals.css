@@ -1,0 +1,356 @@
+/* ============================================
+   BOTÃO DE LOGIN COM GOOGLE
+   ============================================ */
+
+.google-login-button {
+  width: 40%;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.google-login-button:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.google-login-button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.google-login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.google-login-button svg {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   MENSAGEM DE ERRO
+   ============================================ */
+
+.mensagem-erro {
+  width: 40%;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+  border-radius: 4px;
+  color: #c62828;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   RESPONSIVO - MOBILE
+   ============================================ */
+
+@media screen and (max-width: 736px) {
+  .google-login-button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+  .display-flex input {
+    font-size: 16px;
+    margin: 10px auto;
+    
+    /* Ajuste de largura */
+    width: 80px;      
+    max-width: 400px; 
+    
+    /* Ajuste de Padding (Espaço interno) */
+    padding: 12px 15px; /* 12px em cima/baixo, 15px nas laterais */
+    
+    /* Opcional: Melhora o visual */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do input */
+}
+
+  .mensagem-erro {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .google-login-button {
+  width: 40%;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+.image-contrato img {
+  
+  border: #f5f5f5 6px solid;
+  width: 50%;
+  height: auto;
+  float: left;          /* Faz a imagem ir para a esquerda e o texto subir ao lado */
+  margin-right: 20px;   /* Cria um espaço entre a imagem e o texto */
+  margin-bottom: 10px;  /* Espaço para o texto não grudar embaixo */
+  max-width: 300px;
+
+}
+}
+
+.gtr-50 .col-12 .link-texto {
+  text-decoration: none !important;
+  border-bottom: none !important; /* Remove a borda inferior */
+  box-shadow: none !important;    /* Garante que não é uma sombra simulando linha */
+}
+.image img,
+.image.featured {
+  display: block;
+  height: 170px;
+
+  
+}
+.image-sonho img {
+  
+  border: #f5f5f5 6px solid;
+  width: 100%;
+  height: 150px;
+
+  
+}
+
+#header-sonho h2 {
+  font-size: 15px !important;
+}
+
+.box h2 {
+  font-size: 15px !important;
+  text-align: left !important;
+}
+.image-talyta img {
+  
+  border: #f5f5f5 6px solid;
+  width: 50%;
+  height: auto;
+  float: left;          /* Faz a imagem ir para a esquerda e o texto subir ao lado */
+  margin-right: 20px;   /* Cria um espaço entre a imagem e o texto */
+  margin-bottom: 10px;  /* Espaço para o texto não grudar embaixo */
+  max-width: 300px;
+
+  
+}
+
+.image-pave img {
+  
+  border: #f5f5f5 6px solid;
+  width: 80%;
+  height: auto;
+
+  
+}
+
+#header-sonho h2 {
+  text-align: left !important;
+}
+
+
+
+.texto-centralizado section .image {
+  width: 100%;
+  height: auto;
+}
+
+.image-prod img {
+  margin-bottom: -50px;
+  border: #f5f5f5 6px solid;
+  width: 80%;
+  height: auto;
+
+  
+}
+
+.fit {
+  
+  width: 100% !important;
+  
+
+}
+
+ul {
+  list-style: none !important;
+  padding: 0 !important; /* Remove o espaço onde a bolinha ficava */
+  margin: 0 !important;  /* Remove margens externas da lista */
+}
+@media screen and (min-width: 1600px) {   /* SEÇÃO DE LOGIN */
+
+
+  .container-login-desktop  {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .display-grid .slider-container {
+    display: none;
+  }
+
+
+  .login-container-desktop {
+    margin-top: 80px;
+    width: 100%;
+    
+  }
+  .logo-d-choco img {
+    width: 500px;
+  }
+  .logo-d-choco-login img {
+    width: 500px;
+  }
+#logo .logo-d-choco img {
+  width: 500px;
+
+}
+  
+  
+  .login-container-desktop .col-6 {
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .login-container-desktop .row {
+    margin: 0;
+    width: 100%;
+  }
+
+  .login-container-desktop .col-12 {
+    padding: 0;
+    width: 100% !important;
+  }
+
+  
+
+  .display-flex input {
+    font-size: 16px;
+    margin: 10px auto;
+    
+    /* Ajuste de largura */
+    width: 300px;      
+    max-width: 400px; 
+    
+    /* Ajuste de Padding (Espaço interno) */
+    padding: 12px 15px; /* 12px em cima/baixo, 15px nas laterais */
+    
+    /* Opcional: Melhora o visual */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do input */
+}
+
+  .display-flex p {
+    font-size: 14px;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .display-flex a {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .display-flex h1 img {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+
+  .form-button-submit,
+  .login-container-desktop .display-flex .form-button-submit,
+  .login-container-desktop .form-button-submit {
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.85em;
+    
+    padding: 12px;
+    max-width: 100%;
+    width: 400px;
+  }
+  .image-sonho img {
+  
+  border: #f5f5f5 6px solid;
+  width: 100%;
+  height: 600px;
+
+  
+}
+.image-contrato img {
+  
+  border: #f5f5f5 6px solid;
+  width: 30%;
+  height: auto;
+  float: left;          /* Faz a imagem ir para a esquerda e o texto subir ao lado */
+  margin-right: 20px;   /* Cria um espaço entre a imagem e o texto */
+  margin-bottom: 10px;  /* Espaço para o texto não grudar embaixo */
+  max-width: 300px;
+
+}
+.image-pave img {
+  
+  border: #f5f5f5 6px solid;
+  width: 70%;
+  height: auto;
+
+  
+}
+#header-sonho h2 {
+  font-size: 30px !important;
+}
+
+.box h2 {
+  font-size: 30px !important;
+  text-align: left !important;
+}
+
+}
