@@ -78,23 +78,23 @@ export default function Header() {
                       </section>
                     </div>
 
-                    <Link href="/" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-home"></i> Notificações Clientes
-                    </Link>
-                    <Link href="/" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-home"></i> Tela Home
-                    </Link>
-                    <Link href="/catalogo" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-store"></i> Tela Catálogo
-                    </Link>
-                    <Link href="/contrate" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-handshake"></i> Tela Contrate
+                    <Link href="#" onClick={() => setMenuAdminAberto(false)}>
+                      <i></i> Notificações Clientes
                     </Link>
                     <Link href="#" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-store"></i> Adicionar Produtos
+                      <i></i> Foto de Perfil
+                    </Link>
+                    <Link href="/" onClick={() => setMenuAdminAberto(false)}>
+                      <i></i> Tela Home
+                    </Link>
+                    <Link href="/contrate" onClick={() => setMenuAdminAberto(false)}>
+                      <i></i> Tela Contrate
+                    </Link>
+                    <Link href="#" onClick={() => setMenuAdminAberto(false)}>
+                      <i></i> Adicionar Produtos
                     </Link>
                     <Link href="/catalogo" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-arrow-left"></i> Voltar ao Catálogo
+                      <i></i> Voltar ao Catálogo
                     </Link>
                     <button onClick={handleLogout} className="btn-logout">
                       <i className="fa-solid fa-right-from-bracket"></i> Sair
@@ -130,12 +130,15 @@ export default function Header() {
                       </section>
                     </div>
 
-                    <Link href="/perfil" onClick={() => setMenuAberto(false)}>Meus Dados</Link>
+                    <Link href="/perfil" onClick={() => setMenuAberto(false)}>Dados Cadastrados</Link>
+                    <Link href="/perfil" onClick={() => setMenuAberto(false)}>Foto de perfil</Link>
                     <Link href="/pedidos" onClick={() => setMenuAberto(false)}>Meus Pedidos</Link>
                     <Link href="/enderecos" onClick={() => setMenuAberto(false)}>Endereços</Link>
                     <Link href="/telefones" onClick={() => setMenuAberto(false)}>Telefones</Link>
                     <Link href="/catalogo" onClick={() => setMenuAberto(false)}>Voltar ao Catálogo</Link>
-                    <button onClick={handleLogout} className="btn-logout">Sair</button>
+                    <button onClick={handleLogout} className="btn-logout">
+                      <i className="fa-solid fa-right-from-bracket"></i>Sair
+                    </button>
                   </div>
                 </div>
               )}
@@ -191,12 +194,15 @@ export default function Header() {
                   <img src="/images/app.png" alt="" />
                 </section>
               </div>
-              <Link href="/perfil" onClick={() => setMenuAberto(false)}>Meus Dados</Link>
+              <Link href="/perfil" onClick={() => setMenuAberto(false)}>Dados Cadastrados</Link>
+              <Link href="/perfil" onClick={() => setMenuAberto(false)}>Foto de perfil</Link>
               <Link href="/pedidos" onClick={() => setMenuAberto(false)}>Meus Pedidos</Link>
               <Link href="/enderecos" onClick={() => setMenuAberto(false)}>Endereços</Link>
               <Link href="/telefones" onClick={() => setMenuAberto(false)}>Telefones</Link>
               <Link href="/catalogo" onClick={() => setMenuAberto(false)}>Voltar ao Catálogo</Link>
-              <button onClick={handleLogout} className="btn-logout">Sair</button>
+              <button onClick={handleLogout} className="btn-logout"><i className="fa-solid fa-right-from-bracket"></i> Sair
+              
+              </button>
             </div>
           </div>
         </>
@@ -216,20 +222,23 @@ export default function Header() {
                   <img src="/images/app.png" alt="" />
                 </section>
               </div>
-              <Link href="/" onClick={() => setMenuAdminAberto(false)}>
-                <i className="fa-solid fa-home"></i> Tela Home
-              </Link>
-              <Link href="/catalogo" onClick={() => setMenuAdminAberto(false)}>
-                <i className="fa-solid fa-store"></i> Tela Catálogo
-              </Link>
-              <Link href="/contrate" onClick={() => setMenuAdminAberto(false)}>
-                <i className="fa-solid fa-handshake"></i> Tela Contrate
+              <Link href="#" onClick={() => setMenuAdminAberto(false)}>
+                      <i></i> Notificações Clientes
               </Link>
               <Link href="#" onClick={() => setMenuAdminAberto(false)}>
-                      <i className="fa-solid fa-store"></i> Adicionar Produtos
-                    </Link>
+                <i></i> Foto de Perfil
+              </Link>
+              <Link href="/" onClick={() => setMenuAdminAberto(false)}>
+                <i></i> Tela Home
+              </Link>
+              <Link href="/contrate" onClick={() => setMenuAdminAberto(false)}>
+                <i></i> Tela Contrate
+              </Link>
+              <Link href="#" onClick={() => setMenuAdminAberto(false)}>
+                <i></i> Adicionar Produtos
+              </Link>
               <Link href="/catalogo" onClick={() => setMenuAdminAberto(false)}>
-                <i className="fa-solid fa-arrow-left"></i> Voltar ao Catálogo
+                <i></i> Voltar ao Catálogo
               </Link>
               <button onClick={handleLogout} className="btn-logout">
                 <i className="fa-solid fa-right-from-bracket"></i> Sair

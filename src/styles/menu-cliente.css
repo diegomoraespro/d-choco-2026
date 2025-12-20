@@ -120,11 +120,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
 }
 
 .menu-popup-links a {
   color: #333;
+
 }
+
+
 
 .btn-logout {
   color: #d9534f;
@@ -227,7 +231,7 @@
   background-size: cover;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra invertida */
   z-index: 1000;
-    
+  border-radius: 0px;
   overflow-y: auto;
   transform: translateX(100%); /* Começa fora da tela pela direita */
   animation: slideInRight 0.3s ease forwards;
@@ -280,7 +284,7 @@
 /* Cabeçalho do menu - REMOVENDO A LINHA */
 .menu-popup-mobile .menu-popup-header {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: -40px; 
   border-bottom: none !important; /* O !important garante que nenhuma outra regra force a linha */
   padding-bottom: 10px;
 }
@@ -306,7 +310,7 @@
   padding: 8px 0;
   text-align: left;
   text-decoration: none;
-  border-bottom: none; /* Garante que não haverá linha */
+  border-bottom: 1px solid #000 !important; /* Garante que não haverá linha */
   transition: color 0.2s ease;
 }
 
@@ -386,7 +390,7 @@
   background-size: cover;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra invertida */
   z-index: 1000;
-    
+  border-radius: 0px;
   overflow-y: auto;
   transform: translateX(100%); /* Começa fora da tela pela direita */
   animation: slideInRight 0.3s ease forwards;
@@ -400,6 +404,7 @@
   margin-top: 30px;
   
 }
+
 
 .menu-popup-logo img {
   width: 130px;         /* Largura da imagem */
@@ -465,7 +470,7 @@
   padding: 8px 0;
   text-align: left;
   text-decoration: none;
-  border-bottom: none; /* Garante que não haverá linha */
+  border-bottom: solid 1px #000 !important;
   transition: color 0.2s ease;
 }
 
