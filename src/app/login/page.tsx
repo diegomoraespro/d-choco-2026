@@ -135,7 +135,7 @@ export default function LoginPage() {
   return (
     <div className="right-sidebar is-preload">
       <div id="page-wrapper">
-        <section id="header" className="wrapper style1 login-wrapper">
+        <section id="header" className="wrapper style1 login-wrapper cor-session">
           <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart"></i>
             <span className="carrinho-badge">0</span>

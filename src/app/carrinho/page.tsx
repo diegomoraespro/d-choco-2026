@@ -67,7 +67,7 @@ export default function CarrinhoPage() {
 
       <div id="page-wrapper">
         {/* HEADER */}
-        <section id="header">
+        <section id="header" className="cor-session">
           <div className="container">
             <header>
               <h1>
@@ -83,7 +83,7 @@ export default function CarrinhoPage() {
         </section>
 
         {/* MAIN CONTENT */}
-        <section id="main">
+        <section id="main" className="cor-session">
           <div className="container-carrinho">
             <div className="row">
               <div className="col-12">
@@ -168,7 +168,7 @@ export default function CarrinhoPage() {
 <br/>
 <br/>
                       {/* RESUMO DO PEDIDO */}
-                      <section className="box">
+                      <section className="box cor-session">
                         <header>
                           <h2><strong>Resumo do Pedido</strong></h2>
                         </header>

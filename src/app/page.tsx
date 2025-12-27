@@ -25,9 +25,9 @@ export default function HomePage() {
   };
 
   return (
-    <div className="homepage is-preload">
+    <div className="homepage is-preload"> 
       <div id="page-wrapper">
-        <section id="header">
+        <section id="header" className="cor-session">
           <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart"></i>
             <span className="carrinho-badge">0</span>
@@ -45,7 +45,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="main">
+        <section id="main" className="cor-session">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="main">
+        <section id="main" className="cor-session">
           <div className="container">
             <div className="row">
               <div className="col-12">
@@ -155,7 +155,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="main">
+        <section id="main" className="cor-session">
           <div className="container">
             <div className="row">
               <div className="col-12">

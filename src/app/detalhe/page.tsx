@@ -73,7 +73,7 @@ export default function DetalheProdutoPage() {
     <div id="page-wrapper" className="no-sidebar is-preload">
       
       {/* Header */}
-      <section id="header">
+      <section id="header" className="cor-session">
         {/* Agora o link leva para a pasta carrinho */}
         <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart"></i>
@@ -90,7 +90,7 @@ export default function DetalheProdutoPage() {
       </section>
 
       {/* Main */}
-      <section id="main">
+      <section id="main" className="cor-session">
         <div className="container">
             <div id="content">
 

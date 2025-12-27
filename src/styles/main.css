@@ -77,12 +77,14 @@ html {
 }
 
 :root {
+    color-scheme: dark;
+
     /* --- Identidade D'Choco --- */
     --primary-color: #1d4a3e; /* Verde escuro */
     --primary-alt: #2563eb;   /* Azul (caso precise de destaque, senão pode remover) */
     
     /* Fundos */
-    --bg-body: #a87a53;       /* Marrom da marca */
+    --bg-body: #000000;       /* Marrom da marca */
     --bg-card: #ffffff;       /* Fundo branco para leitura */
     
     /* Textos */

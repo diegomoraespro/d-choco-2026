@@ -17,7 +17,7 @@ export default function ContratePage() {
     <div id="page-wrapper" className="homepage is-preload">
       
       {/* Header */}
-      <section id="header">
+      <section id="header" className="cor-session">
         {/* Ícone do Carrinho */}
         <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart"></i>
@@ -36,13 +36,13 @@ export default function ContratePage() {
       </section>
 
       {/* Main */}
-      <section id="main">
+      <section id="main" className="cor-session">
         <div className="container">
             <div className="row">
             
                 <div className="col-12">
                     {/* Highlights */}
-                    <section>
+                    <section >
                         <article className="box highlight">
                             <header>
                                 <h2><strong><a href="#">Entenda como funciona nossos serviços</a></strong></h2>

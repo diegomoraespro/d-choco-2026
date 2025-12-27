@@ -155,6 +155,11 @@
   
 }
 
+.cor-session {
+  background-color: #a87a53 !important;       /* Marrom da marca */ 
+  padding-top: 4%;
+}
+
 .nome-produto-catalogo {
   margin-top: -30%;
 

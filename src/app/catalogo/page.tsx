@@ -82,7 +82,7 @@ export default function CatalogoPage() {
       /> 
 
       <div id="page-wrapper">
-        <section id="header">
+        <section id="header" className="cor-session">
           <Link className="carrinho-flutuante" href="/carrinho" title="Ir para o carrinho">
             <i className="fa-solid fa-shopping-cart" />
             <span className="carrinho-badge">{cartCount}</span>
@@ -100,7 +100,7 @@ export default function CatalogoPage() {
           </div>
         </section>
 
-        <section id="main">
+        <section id="main" className="cor-session">
           <div className="container">
             <div id="content">
               <article className="box post">
@@ -114,7 +114,7 @@ export default function CatalogoPage() {
               <div className="row">
                 {products.map((product) => (
                   <div key={product.id} className="col-4 col-6-medium col-12-small texto-centralizado">
-                    <section>
+                    <section >
                       <Link href={`/detalhe?id=${product.id}`} className="image featured">
                         <img src={product.image} alt={product.name} />
                       </Link>

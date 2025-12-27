@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -29,14 +30,18 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "D'Choco",
   description: "Loja de chocolates artesanais",
-  // Removemos themeColor daqui para evitar warnings
+
 };
 
 // NEXT 13 PWA / theme-color
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000", // Cor da barra de status
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#a87a53" },
+    { media: "(prefers-color-scheme: dark)", color: "#a87a53" }
+  ],
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -47,18 +52,20 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        {/* Link para o Manifest */}
         <link rel="manifest" href="/manifest.json?v=2" />
-        {/* Ícones da PWA */}
         <link rel="icon" href="/images/app.png" />
         <link rel="apple-touch-icon" href="/images/app.png" />
-        {/* Meta para tema */}
-        <meta name="theme-color" content="#000" />
+        
+        {/* Meta tags para theme-color com suporte a modo claro/escuro */}
+        <meta name="theme-color" content="#a87a53" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#a87a53" media="(prefers-color-scheme: dark)" />
+        
+        {/* Para iOS */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className={inter.className}>
-        <br/>
-        <br/>
-        <br/>
+        
         <AuthProvider>
           <CarrinhoProvider>
             {/* Inicializa o PWA */}
@@ -78,3 +85,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
